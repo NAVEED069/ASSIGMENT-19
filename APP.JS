@@ -1,3 +1,54 @@
+var posNum = prompt("Enter a positive number:");
+posNum = Number(posNum);
+document.write("<h3>1. Positive Number</h3>");
+document.write("Number: " + posNum + "<br>");
+document.write("Round off: " + Math.round(posNum) + "<br>");
+document.write("Floor: " + Math.floor(posNum) + "<br>");
+document.write("Ceil: " + Math.ceil(posNum) + "<hr>");
+
+var negNum = prompt("Enter a negative floating point number:");
+negNum = Number(negNum);
+document.write("<h3>2. Negative Floating Number</h3>");
+document.write("Number: " + negNum + "<br>");
+document.write("Round off: " + Math.round(negNum) + "<br>");
+document.write("Floor: " + Math.floor(negNum) + "<br>");
+document.write("Ceil: " + Math.ceil(negNum) + "<hr>");
+
+var absNum = prompt("Enter a number for absolute value:");
+document.write("<h3>3. Absolute Value</h3>");
+document.write("Absolute value: " + Math.abs(absNum) + "<hr>");
+
+var dice = Math.floor(Math.random() * 6) + 1;
+document.write("<h3>4. Dice Roll</h3>");
+document.write("Dice value: " + dice + "<hr>");
+
+var coin = Math.floor(Math.random() * 2) + 1;
+document.write("<h3>5. Coin Toss</h3>");
+if (coin === 1) {
+  document.write("Heads");
+} else {
+  document.write("Tails");
+}
+document.write("<hr>");
+
+var rand100 = Math.floor(Math.random() * 100) + 1;
+document.write("<h3>6. Random Number (1–100)</h3>");
+document.write(rand100 + "<hr>");
+
+var weight = prompt("Enter your weight (e.g. 50, 50kgs, 50.2kilograms):");
+var parsedWeight = parseFloat(weight);
+document.write("<h3>7. Weight</h3>");
+document.write("Your weight is " + parsedWeight + " kgs<" + "br><hr>");
+
+var secret = Math.floor(Math.random() * 10) + 1;
+var userGuess = Number(prompt("Guess a number between 1 and 10:"));
+document.write("<h3>8. Secret Number Game</h3>");
+if (userGuess === secret) {
+  document.write("Congratulations! You guessed the secret number.");
+} else {
+  document.write("Sorry! The secret number was " + secret);
+}
+
 var now = new Date();
 document.write("<h3>Q1:</h3>Current Date & Time: " + now + "<br><br>");
 
@@ -67,3 +118,4 @@ document.write("Charges per Unit: " + chargesPerUnit.toFixed(2) + "<br>");
 document.write("Net Amount Payable: " + netAmount.toFixed(2) + "<br>");
 document.write("Late Payment Surcharge: " + latePayment.toFixed(2) + "<br>");
 document.write("Gross Amount Payable: " + grossAmount.toFixed(2) + "<br>");
+
